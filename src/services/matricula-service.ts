@@ -19,4 +19,8 @@ export class MatriculaService {
     return this._httpClient.get<Matricula[]>(this.baseUrl);
   }
 
+  getMatriculaById(id: number): Observable<Matricula>{
+    return this._httpClient.get<Matricula>(this.baseUrl + "/" + id);
+  }
+
 }

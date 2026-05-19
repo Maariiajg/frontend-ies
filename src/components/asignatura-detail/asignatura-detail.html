@@ -20,13 +20,19 @@
       </div>
 
       <div class="campo">
-        <div class="label">Apellidos</div>
-        <div class="valor">{{ asignatura.apellidos }}</div>
+        <div class="label">Horas</div>
+        <div class="valor">{{ asignatura.horas }}</div>
       </div>
 
       <div class="campo">
-        <div class="label">iPasen</div>
-        <div class="valor">{{ asignatura.ipasen }}</div>
+        <div class="label">Profesor</div>
+        <div class="valor">
+          @if (asignatura.profesor) {
+            {{ asignatura.profesor.nombre }} {{ asignatura.profesor.apellidos }}
+          } @else {
+            Sin profesor asignado
+          }
+        </div>
       </div>
     }@else {
       <p>Cargando asignatura...</p>

@@ -19,4 +19,8 @@ export class ProfesorService {
     return this._httpClient.get<Profesor[]>(this.baseUrl);
   }
 
+  getProfesorById(id: number): Observable<Profesor>{
+    return this._httpClient.get<Profesor>(this.baseUrl + "/" + id);
+  }
+
 }

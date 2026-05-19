@@ -15,18 +15,35 @@
       </div>
 
       <div class="campo">
-        <div class="label">Nombre</div>
-        <div class="valor">{{ matricula.nombre }}</div>
+        <div class="label">Curso</div>
+        <div class="valor">{{ matricula.curso }}</div>
       </div>
 
       <div class="campo">
-        <div class="label">Apellidos</div>
-        <div class="valor">{{ matricula.apellidos }}</div>
+        <div class="label">Nota Media</div>
+        <div class="valor">{{ matricula.notaMedia }}</div>
       </div>
 
       <div class="campo">
-        <div class="label">iPasen</div>
-        <div class="valor">{{ matricula.ipasen }}</div>
+        <div class="label">Alumno</div>
+        <div class="valor">
+          @if (matricula.alumno) {
+            {{ matricula.alumno.nombre }} {{ matricula.alumno.apellidos }}
+          } @else {
+            Sin alumno asignado
+          }
+        </div>
+      </div>
+
+      <div class="campo">
+        <div class="label">Asignatura</div>
+        <div class="valor">
+          @if (matricula.asignatura) {
+            {{ matricula.asignatura.nombre }}
+          } @else {
+            Sin asignatura asignada
+          }
+        </div>
       </div>
     }@else {
       <p>Cargando matricula...</p>
