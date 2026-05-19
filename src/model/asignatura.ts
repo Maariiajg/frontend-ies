@@ -1,3 +1,4 @@
+import { Alumno } from "./alumno";
 import { Profesor } from "./profesor";
 
 export class Asignatura {
@@ -6,7 +7,8 @@ export class Asignatura {
         private _id: number,
         private _nombre: string,
         private _horas: number,
-        private _profesor: Profesor
+        private _profesor: Profesor,
+        private _alumno: Alumno,
     ){};
 
     get id(): number { return this._id; }
@@ -17,5 +19,7 @@ export class Asignatura {
     set horas(value: number) { this._horas = value; }
     get profesor(): Profesor { return this._profesor; }
     set profesor(value: Profesor) { this._profesor = value; }
+    get alumno(): Alumno { return this._alumno; }
+    set alumno(value: Alumno) { this._alumno = value; }
     
 }

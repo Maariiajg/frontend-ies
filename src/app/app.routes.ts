@@ -8,6 +8,7 @@ import { MatriculaDetail } from '../components/matricula-detail/matricula-detail
 import { Matriculas } from '../components/matriculas/matriculas';
 import { ProfesorDetail } from '../components/profesor-detail/profesor-detail';
 import { Profesores } from '../components/profesores/profesores';
+import { AlumnoAsignatura } from '../components/alumno-asignatura/alumno-asignatura';
 
 export const routes: Routes = [
 
@@ -20,6 +21,7 @@ export const routes: Routes = [
     {path: 'matricula/:id', component: MatriculaDetail},
     {path: 'profesor/:id', component: ProfesorDetail},
     {path: 'asignatura/:id', component: AsignaturaDetail},
-    {path: 'alumno/:id', component: AlumnoDetail}
+    {path: 'alumno/:id', component: AlumnoDetail},
+    {path: 'asignatura/:id/alumnos', component: AlumnoAsignatura}
     
 ];

@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Asignatura } from '../../model/asignatura';
 import { AsignaturaService } from '../../services/asignatura-service';
+import { Alumno } from '../../model/alumno';
+import { AlumnoService } from '../../services/alumno-service';
 
 @Component({
   selector: 'app-asignaturas',
@@ -13,6 +15,7 @@ import { AsignaturaService } from '../../services/asignatura-service';
 export class Asignaturas {
 
   asignaturas: Asignatura[] = [];
+  alumnos: AlumnoService[] = [];
   
   constructor(
     private asignaturaService: AsignaturaService
@@ -23,4 +26,5 @@ export class Asignaturas {
       this.asignaturas = data;
     })
   }
+
 }

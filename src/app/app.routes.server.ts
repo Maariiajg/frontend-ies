@@ -20,5 +20,11 @@ export const serverRoutes: ServerRoute[] = [
   {
     path: '**',
     renderMode: RenderMode.Prerender
+  },
+
+  {
+    path: 'asignatura/:id/alumnos',
+    renderMode: RenderMode.Server
   }
+
 ];

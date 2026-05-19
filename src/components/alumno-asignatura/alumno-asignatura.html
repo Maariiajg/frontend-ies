@@ -1,0 +1,41 @@
+@if (asignatura) {
+  <h2>Alumnos matriculados en: {{ asignatura.nombre }}</h2>
+  <p><strong>Profesor/a:</strong> {{ asignatura.profesor.nombre }} {{ asignatura.profesor.apellidos }}</p>
+}
+
+<table class="tabla">
+  <thead>
+    <tr>
+      <th>ID Alumno</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>iPasen</th>
+      <th>Curso</th>
+      <th>Nota Media</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (mat of matriculasFiltradas; track mat.idMat) {
+      <tr>
+        <td>{{ mat.alumno.id }}</td>
+        <td>{{ mat.alumno.nombre }}</td>
+        <td>{{ mat.alumno.apellidos }}</td>
+        <td>{{ mat.alumno.ipasen }}</td>
+        <td>{{ mat.curso }}</td>
+        <td>{{ mat.notaMedia }}</td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="6" style="text-align: center; color: #777;">
+          No hay alumnos matriculados en esta asignatura actualmente.
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<div>
+  <a routerLink="/asignaturas" class="btn">Volver a Asignaturas</a>
+</div>
+
+
