@@ -15,7 +15,7 @@ FROM nginx:alpine
 
 # Copiamos el resultado compilado de la etapa 1 al servidor Nginx
 # ¡IMPORTANTE! Revisa la ruta de abajo. 
-COPY --from=build /app/dist/frontend-ies /usr/share/nginx/html
+COPY --from=build /app/dist/frontend-ies/browser /usr/share/nginx/html
 
 # Exponemos el puerto 80
 EXPOSE 80
