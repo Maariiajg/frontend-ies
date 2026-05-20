@@ -1,5 +1,5 @@
 # ETAPA 1: Construcción (Build)
-FROM node:18 AS build
+FROM node:22 AS build
 WORKDIR /app
 
 # Copiamos los archivos de dependencias y las instalamos
